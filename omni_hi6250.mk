@@ -25,6 +25,12 @@
 
 $(call inherit-product, $(SRC_TARGET_DIR)/product/aosp_base_telephony.mk)
 
+# ADB
+ADDITIONAL_DEFAULT_PROPERTIES += \
+    ro.adb.secure=0 \
+    ro.secure=0 \
+    ro.zygote=zygote64_32 \
+
 # APN
 $(call inherit-product, vendor/omni/config/gsm.mk)
 

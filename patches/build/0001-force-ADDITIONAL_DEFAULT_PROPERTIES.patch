@@ -1,0 +1,30 @@
+From e1d110935a6f9c99b4f4585afb28943785fd78d8 Mon Sep 17 00:00:00 2001
+From: hak86 <hakamelassouad@gmail.com>
+Date: Fri, 3 Jan 2020 02:11:59 +0100
+Subject: [PATCH] force ADDITIONAL_DEFAULT_PROPERTIES
+
+Change-Id: Iafb4104516b33c8760acbc78c57edb570e288ad3
+---
+ core/main.mk | 6 +++---
+ 1 file changed, 3 insertions(+), 3 deletions(-)
+
+diff --git a/core/main.mk b/core/main.mk
+index 1946edb..e9d8fe6 100644
+--- a/core/main.mk
++++ b/core/main.mk
+@@ -133,9 +133,9 @@ endif
+ #
+ # -----------------------------------------------------------------
+ # Validate ADDITIONAL_DEFAULT_PROPERTIES.
+-ifneq ($(ADDITIONAL_DEFAULT_PROPERTIES),)
+-$(error ADDITIONAL_DEFAULT_PROPERTIES must not be set before here: $(ADDITIONAL_DEFAULT_PROPERTIES))
+-endif
++#ifneq ($(ADDITIONAL_DEFAULT_PROPERTIES),)
++#$(error ADDITIONAL_DEFAULT_PROPERTIES must not be set before here: $(ADDITIONAL_DEFAULT_PROPERTIES))
++#endif
+ 
+ #
+ # -----------------------------------------------------------------
+-- 
+2.20.1
+
